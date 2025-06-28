@@ -1,6 +1,6 @@
 .AboutMe-container {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 80vh; /* Increased from 1vh to 90vh to ensure enough content space */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly; /* Better than center when split layout */
@@ -8,8 +8,40 @@
   background: linear-gradient(to right, #c85fb8, #ffffff);
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
 }
 
+/* Contact section styling for About page */
+.AboutMe-container + .contact-section {
+  background: linear-gradient(135deg, #180404, #c85fb8);
+  position: relative;
+  margin-top: -100px; /* Increased overlap */
+  padding-top: 150px; /* Increased top padding to compensate */
+  z-index: 0;
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Create a more pronounced curve effect */
+.AboutMe-container::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to right, #c85fb8, #ffffff);
+  border-radius: 0 0 50% 50% / 100px;
+  z-index: 2;
+  animation: wave 8s ease-in-out infinite;
+}
+
+/* Add a subtle wave animation to the curve */
+@keyframes wave {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.05); }
+}
 
 .Leftpanel, .Rightpanel {
   flex: 1 1 500px;
@@ -145,10 +177,10 @@
   padding: 12px 24px;
   margin-top: 20px;
   width: 150px;
-  background-color: #ff4444; /* Bright red as a base color */
+  background-color: #180404; /* Bright red as a base color */
   color: white;
   border: none;
-  border-radius: 25px; /* Rounded shape */
+  border-radius: 50px; /* Rounded shape */
   font-size: 16px;
   cursor: pointer;
   position: relative;
@@ -225,14 +257,17 @@
 @media (max-width: 768px) {
   .AboutMe-container {
     flex-direction: column;
+    text-align: center;
   }
   .Leftpanel, .Rightpanel {
-    flex: 100%;
-    min-width: 0;
+    max-width: 90%;
   }
   .Profilepic2{
-    width: 150px;
-    border-radius: 150px;
+    width: 350px;
+    height: 350px;
+  }
+  .contact-content {
+    flex-direction: column;
   }
 }
 
@@ -337,5 +372,31 @@
     width: 150px;
     border-radius: 150px;
   }
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 45%;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
