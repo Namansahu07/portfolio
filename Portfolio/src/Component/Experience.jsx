@@ -6,4 +6,4 @@ const Experince = () => {
   )
 }
 
-export default Experince
+export default Experince;

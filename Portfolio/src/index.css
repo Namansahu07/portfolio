@@ -8,7 +8,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Prevent both horizontal and vertical scroll */
+  overflow-x: hidden; /* Only prevent horizontal scroll, allow vertical scroll */
 }
 
 .cutomcontainer{
