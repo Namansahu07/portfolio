@@ -99,6 +99,8 @@ const AboutMe = () => {
   return (
     <>
       <div className="AboutMe-container">
+
+
         <div className="Leftpanel">
           <h1 className='Chnagecolor'>Hi, I'm<br />Naman Sahu</h1>
           <br />

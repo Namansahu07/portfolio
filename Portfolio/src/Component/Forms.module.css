@@ -1,0 +1,252 @@
+/* Make sure form inputs are accessible */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(200, 95, 184, 0.5) !important;
+    border-color: #c85fb8 !important;
+}
+
+/* Footer Styles */
+.footer {
+  background: linear-gradient(135deg, #180404, #d1c8cf);
+  padding: 40px 20px;
+  color: white;
+  margin-top: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #fff, #c8c8c8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  position: relative;
+}
+
+.footer-link:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #c85fb8;
+}
+
+.footer-link:hover:after {
+  width: 100%;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.footer-social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-5px);
+  background-color: white;
+  color: #180404;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 15px;
+  }
+  
+  .footer-social {
+    gap: 10px;
+  }
+}
+
+/* Contact Section with curve effect */
+.contactSection {
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    color: white;
+    position: relative;
+    padding: 120px 20px 60px;
+    z-index: 1;
+}
+
+.contactContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contactContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contactInfo {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contactInfo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contactDetails {
+    margin: 20px 0;
+}
+
+.contactDetails p {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.contactDetails p svg {
+    margin-right: 15px;
+}
+
+.socialLinks {
+    display: flex;
+    margin-top: 20px;
+}
+
+.socialIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+    transform: translateY(-5px);
+    background-color: white;
+    color: #180404;
+}
+
+.contactForm {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Use :global() to style the inner parts of React-Bootstrap components */
+.contactForm :global(.form-label) {
+    color: white;
+    font-weight: bold;
+}
+
+.contactForm :global(.form-control) {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #333;
+}
+
+.contactForm :global(.form-control:focus) {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+    border-color: white;
+}
+
+.submitBtn {
+    background-color: #180404;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submitBtn:hover {
+    background-color: #333;
+}
+
+/* Mobile Responsiveness for Contact Section */
+@media (max-width: 768px) {
+    .contactContent {
+        flex-direction: column;
+    }
+
+    .contactInfo{
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+    .contactForm {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.contactSection::before,
+.contactSection::after {
+    content: none !important;
+}

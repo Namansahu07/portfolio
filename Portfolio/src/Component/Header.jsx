@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import './Header.css'
 import logo from '../assets/logo.png'
 import search from '../assets/search.png'
+import ButtonWrapper from './Button'
+
 
 const Header = () => {
   return ( 
@@ -14,9 +16,8 @@ const Header = () => {
          <li>  <Link to="/Experience">Experience</Link></li>
         <li><Link to="/Projects">Projects</Link></li> 
       </ul></nav>
-      <div className="Searchbox">
-        <button   className="searchbtn"> Availble for freelance</button>
-        
+      <div className="Searchbox">        
+        <button className="searchbtn"> Availble for freelance</button>
       </div>
       </div>
   )

@@ -7,20 +7,21 @@ import Skills from './Component/Skills';
 import Experience from './Component/Experience'; 
 import Projects from './Component/Projects';
 import Education from './Component/Education';
+import Footer from './Component/Footer';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <> <Header /> <About_me /> </>
+      element: <> <Header /> <About_me /> <Footer /> </>
     },
     {
       path: "/Skills",
-      element: <> <Header /> <Skills /> </>
+      element: <> <Header /> <Skills /> <Footer /> </>
     },
     {
       path: "/Experience",
-      element: <> <Header /> <Experience /> </>
+      element: <> <Header /> <Experience /> <Footer /> </>
     },
     {
       path: "/Projects",

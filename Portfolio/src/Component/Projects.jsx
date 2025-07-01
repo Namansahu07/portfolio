@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import './Projects.css';
-
+import Forms from './Forms';
 
 const Projects = () => {
   // Background style for parallax sections
@@ -79,6 +79,7 @@ const Projects = () => {
   };
 
   return (
+    <>
     <div className="projects-container">
       <div style={{overflow: "hidden", backgroundColor: "#f8f9fa"}}>
         <Carousel fade>
@@ -244,6 +245,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

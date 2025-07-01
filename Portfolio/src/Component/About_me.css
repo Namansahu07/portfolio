@@ -42,7 +42,6 @@
   0%, 100% { transform: scaleX(1); }
   50% { transform: scaleX(1.05); }
 }
-
 .Leftpanel, .Rightpanel {
   flex: 1 1 500px;
   max-width: 600px;
@@ -387,7 +386,7 @@
   flex-wrap: wrap;
 }
 
-.contact-info, .contact-form {
+.contact-form {
   flex: 1 1 45%;
   min-width: 300px;
   background: rgba(255, 255, 255, 0.1);
@@ -399,4 +398,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
 }
+
+.contact-info {
+  margin-bottom: 50px;
+}
+
 
