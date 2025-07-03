@@ -17,6 +17,14 @@ html, body {
 
 .cutomcontainer{
    width: 100vw;
-  min-height: 100vh;
+  min-height: 20vh;
   background: linear-gradient(to right, #c85fb8, #ffffff);
+}
+
+.vertical-timeline-element-date {
+  color: black !important;
+}
+
+.timeline-item-date {
+    color: black !important;
 }

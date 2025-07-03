@@ -1,19 +1,20 @@
 import React from 'react';
 import Header from './Component/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Form, RouterProvider } from "react-router-dom";
 import About_me from './Component/About_me';  
 import Skills from './Component/Skills';      
 import Experience from './Component/Experience'; 
 import Projects from './Component/Projects';
-import Education from './Component/Education';
+import Forms from './Component/Forms';
+
 import Footer from './Component/Footer';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <> <Header /> <About_me /> <Footer /> </>
+      element: <> <Header /> <About_me /> <Forms/> <Footer /> </>
     },
     {
       path: "/Skills",
@@ -25,11 +26,11 @@ function App() {
     },
     {
       path: "/Projects",
-      element: <> <Header /> <Projects /> </>
+      element: <> <Header /> <Projects /> <Footer /> </>
     },
     {
       path: "/Education",
-      element: <> <Header /> <Education /> </>
+      element: <> <Header /> </>
     }
   ]);
 
