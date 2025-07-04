@@ -7,19 +7,23 @@ import ButtonWrapper from './Button'
 
 
 const Header = () => {
-  return ( 
+  return (
     <div className="Navbar">
-      <img src={logo} alt="" className="Navbarimg"></img>
-      <nav><ul>
-         <li><Link to="/">About</Link></li>
+      <a href="/">
+        <img src={logo} alt="" className="Navbarimg"></img>
+      </a>
+      <nav>
+        <ul>
+        <li><Link to="/">About</Link></li>
         <li><Link to="/Skills">Skills</Link></li>
-         <li>  <Link to="/Experience">Experience</Link></li>
-        <li><Link to="/Projects">Projects</Link></li> 
-      </ul></nav>
-      <div className="Searchbox">        
+        <li>  <Link to="/Experience">Experience</Link></li>
+        <li><Link to="/Projects">Projects</Link></li>
+      </ul>
+      </nav>
+      <div className="Searchbox">
         <button className="searchbtn"> Availble for freelance</button>
       </div>
-      </div>
+    </div>
   )
 }
 

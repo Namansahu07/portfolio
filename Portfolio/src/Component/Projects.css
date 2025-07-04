@@ -133,30 +133,37 @@
 .cards-section {
     min-height: 50vh;
     padding: 30px 20px 20px;
-    background: linear-gradient(to right, #c85fb8, #ffffff);
+    background: #18181b;
     perspective: 1000px;
     transform-style: preserve-3d;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: visible;
-    margin-top: -40px;
+    overflow: hidden;
+    margin-top: 0;
     padding-top: 60px;
 }
 
+.projects-header-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+    padding: 0 0.2rem;
+}
 
 .section-title {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    font-size: 2.5rem; /* Slightly reduced for better proportions at 100% */
-    font-weight: bold;
-    color: #ffffff;
-    position: relative;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    text-shadow: none;
 }
 
 .section-title:after {
@@ -242,9 +249,13 @@
 }
 
 .project-card .card-img-top {
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    width: 100%;
+  height: 220px;
+  object-fit: cover; /* Fills image while maintaining aspect ratio */
+  object-position: center; /* Focuses on center of image */
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .project-card:hover .card-img-top {
@@ -360,6 +371,179 @@
     .section-title,
     .cards-container {
         transform: none;
+    }
+}
+
+.modern-project-card {
+  background: #232323;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  max-width: 410px;
+  margin: 0 auto;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1.5px solid #282828;
+}
+
+.modern-project-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.28);
+  transform: translateY(-6px) scale(1.012);
+}
+
+.modern-project-img-wrap {
+  width: 100%;
+  background: #18181b;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modern-project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    background: #232323;
+    display: block;
+}
+.modern-project-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.modern-project-badge {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.22em 0.85em;
+  border-radius: 8px;
+  background: #232323;
+  color: #fff;
+  letter-spacing: 0.03em;
+  opacity: 0.92;
+  border: 1px solid #353535;
+  margin-right: 0.2em;
+  margin-bottom: 0.1em;
+  user-select: none;
+}
+
+.modern-project-badge.locked {
+  background: #353535;
+  color: #bdbdbd;
+  font-weight: 700;
+  margin-left: 0.5em;
+}
+
+.modern-project-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 100%;
+  letter-spacing: 0.01em;
+}
+
+.modern-project-desc {
+  color: #d1d1d1;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: left;
+  width: 100%;
+  min-height: 56px;
+}
+
+.modern-project-btn {
+  width: 100%;
+  display: block;
+  background: #fff;
+  color: #232323;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75em 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  margin-top: auto;
+}
+
+.modern-project-btn:hover {
+  background: #c85fb8;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .modern-project-card {
+    padding: 1rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+  }
+  .modern-project-img {
+    height: 120px;
+    max-height: 120px;
+  }
+  .modern-project-title {
+    font-size: 1.01rem;
+  }
+  .modern-project-desc {
+    font-size: 0.97rem;
+    min-height: 36px;
+  }
+  .modern-project-btn {
+    font-size: 0.98rem;
+    padding: 0.6em 0;
+  }
+}
+
+.projects-all-btn {
+  background: #232323;
+  color: #fff;
+  border: 1.5px solid #353535;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.65em 1.3em;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  outline: none;
+  margin-left: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.projects-all-btn:hover {
+  background: #c85fb8;
+  color: #fff;
+  border-color: #c85fb8;
+}
+
+@media (max-width: 600px) {
+  .projects-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1.1rem;
+  }
+  .section-title {
+    font-size: 1.25rem;
+  }
+  .projects-all-btn {
+    font-size: 0.98rem;
+    padding: 0.5em 1em;
+    margin-left: 0;
     }
 }
 

@@ -17,8 +17,11 @@ html, body {
 
 .cutomcontainer{
    width: 100vw;
-  min-height: 20vh;
-  background: linear-gradient(to right, #c85fb8, #ffffff);
+  min-height: 10vh;
+  background-color: #0d0d0d; /* Very dark background */
+  background-image: radial-gradient(circle, #2e2e2e 1px, transparent 1px), radial-gradient(circle, #2e2e2e 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
 }
 
 .vertical-timeline-element-date {

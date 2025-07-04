@@ -5,7 +5,6 @@ import '../Component/About_me.css';
 import ResumePDF from '../assets/Resume.pdf';
 
 const AboutMe = () => {
-  const [showResume, setShowResume] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [textIndex, setTextIndex] = useState(0); // Which sentence
   const [charIndex, setCharIndex] = useState(0); // Which character
@@ -15,7 +14,7 @@ const AboutMe = () => {
   const images = [Naman, Naman2];
 
   const handleResumeClick = () => {
-    setShowResume(!showResume);
+    window.open(ResumePDF, '_blank');
   };
 
   const texts = [
@@ -66,26 +65,12 @@ const AboutMe = () => {
     <>
       <div className="AboutMe-container">
         <div className="Leftpanel">
-          <h1 className='Chnagecolor'>Hi, I'm<br />Naman Sahu</h1>
+          <h1 className='Chnagecolor'>Hi, I'm<br /><span className="highlight">Naman Sahu</span></h1>
           <br />
           <div className="typing-wrapper">
             <h2 className='typing-text'>{displayedText}<span className="cursor">|</span></h2>
           </div>
-          <button className="btn" onClick={handleResumeClick}>Resume</button>
-
-          {showResume && (
-            <div className="resume-overlay">
-              <iframe
-                src={ResumePDF}
-                className="resume-frame"
-                title="resume"
-                width="100%"
-                height="1000px"
-                style={{ overflow: 'hidden' }}
-              />
-              <button className="close-btn" onClick={handleResumeClick}>x</button>
-            </div>
-          )}
+          <button className="btn" onClick={handleResumeClick}>RESUME</button>
         </div>
 
         <div className="Rightpanel">

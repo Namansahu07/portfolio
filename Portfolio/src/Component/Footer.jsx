@@ -7,10 +7,10 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <div className={styles.footerLogo}>Thanks for visiting ❤️</div>
         <div className={styles.footerLinks}>
-          <a href="#" className={styles.footerLink}>About</a>
-          <a href="#" className={styles.footerLink}>Skills</a>
-          <a href="#" className={styles.footerLink}>Experience</a>
-          <a href="#" className={styles.footerLink}>Projects</a>
+           <a href="" className={styles.footerLink}>About</a>
+          <a href="/Skills" className={styles.footerLink}>Skills</a>
+          <a href="/Experience" className={styles.footerLink}>Experience</a>
+          <a href="/Projects" className={styles.footerLink}>Projects</a>
         </div>
         <div className={styles.footerSocial}>
           <a href="https://www.instagram.com/nmn.sahu/profilecard/?igsh=MW5ra3YycGJqdTVueA==" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>

@@ -95,51 +95,57 @@ const Projects = () => {
         </Carousel>
       </div>
       
-      <div className="parallax-section cards-section" >
+      <div className="parallax-section cards-section">
         <div className="cards-section-content">
-          <h2 className="section-title" style={titleStyle}>My Projects</h2>
+          <div className="projects-header-row">
+            <h2 className="section-title">My Projects</h2>
+            <button className="projects-all-btn">All Projects &rarr;</button>
+          </div>
           <div className="cards-container">
-            <Card className="project-card">
-              <Card.Img src={ExampleCarouselImage} />
-              <Card.Body>
-                <Card.Title>Numerology</Card.Title>
-                <Card.Text>
-                  Personalized app that analyzes birth dates and names to reveal personality traits and life path numbers. Built with React.
-                </Card.Text>
-                <div className="card-buttons">
-                  <a href={projectLinks.numerology.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Demo</a>
-                  <a href={projectLinks.numerology.github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
-                </div>
-              </Card.Body>
-            </Card>
-            
-            <Card className="project-card">
-              <Card.Img src={tingdong} />
-              <Card.Body>
-                <Card.Title>Ting Dong</Card.Title>
-                <Card.Text>
-                  A "Tinder for Dogs" app where pet owners can find playmates for their furry friends. Developed using React Native.
-                </Card.Text>
-                <div className="card-buttons">
-                  <a href={projectLinks.tingDong.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Demo</a>
-                  <a href={projectLinks.tingDong.github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
-                </div>
-              </Card.Body>
-            </Card>
-            
-            <Card className="project-card">
-              <Card.Img src={packers} />
-              <Card.Body>
-                <Card.Title>Packers & Movers</Card.Title>
-                <Card.Text>
-                  Relocation service platform connecting users with verified movers and providing real-time shipment tracking. Built with React.
-                </Card.Text>
-                <div className="card-buttons">
-                  <a href={projectLinks.packers.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Demo</a>
-                  <a href={projectLinks.packers.github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
-                </div>
-              </Card.Body>
-            </Card>
+            {/* Card 1 */}
+            <div className="modern-project-card">
+              <div className="modern-project-img-wrap">
+                <img src={ExampleCarouselImage} alt="Numerology" className="modern-project-img" />
+              </div>
+              <div className="modern-project-badges-row">
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>website</span>
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>PRODUCT</span>
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>INTERNSHIP</span>
+             
+              </div>
+              <div className="modern-project-title">Numerology</div>
+              <div className="modern-project-desc">Built a fully responsive web application featuring 5+ numerology calculators. Enhanced
+user experience through dynamic form handling,and modalbased flows like “Book Appointment” and “Ask Your Questions.”</div>
+              <a href="https://glittering-crumble-c39134.netlify.app/" target="_blank" rel="noopener noreferrer" className="modern-project-btn">DM for walkthrough</a>
+            </div>
+            {/* Card 2 */}
+            <div className="modern-project-card">
+              <div className="modern-project-img-wrap">
+                <img src={tingdong} alt="Brio" className="modern-project-img" />
+              </div>
+              <div className="modern-project-badges-row">
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>Project</span>
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>WEBSITE</span>
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>TINDER</span>
+              </div>
+              <div className="modern-project-title">TingDog</div>
+              <div className="modern-project-desc">Developed Tingdog, a fun and engaging Tinder-like web application for dogs, designed to help pet owners connect their furry friends. It’s built using HTML and CSS with a playful, responsive interface.</div>
+              <a href="https://marvelous-sopapillas-b9f61f.netlify.app/" target="_blank" rel="noopener noreferrer" className="modern-project-btn">View this Project</a>
+            </div>
+            {/* Card 3 */}
+            <div className="modern-project-card">
+              <div className="modern-project-img-wrap">
+                <img src={packers} alt="Traffic Signal Optimisation" className="modern-project-img" />
+              </div>
+              <div className="modern-project-badges-row">
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>DASHBOARD</span>
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>WEBSITE</span>
+                <span className="modern-project-badge" style={{color:'#fff', background:'#232323'}}>UI</span>
+              </div>
+              <div className="modern-project-title">Packers and Movers</div>
+              <div className="modern-project-desc">Packers and Movers website to streamline the process of booking relocation services. It features a user-friendly layout and essential service details, built using modern web technologies.</div>
+              <a href="https://lustrous-marigold-210758.netlify.app/" target="_blank" rel="noopener noreferrer" className="modern-project-btn">View this Project</a>
+            </div>
           </div>
         </div>
       </div>

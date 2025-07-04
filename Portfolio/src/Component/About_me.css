@@ -1,347 +1,251 @@
+/* Modern Professional (Dark Theme) About Me Styles */
+
 .AboutMe-container {
-  width: 100vw;
-  min-height: 85vh; /* Increased from 1vh to 90vh to ensure enough content space */
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0d0d0d; /* Very dark background */
+  background-image: radial-gradient(circle, #2e2e2e 1px, transparent 1px), radial-gradient(circle, #2e2e2e 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  min-height: 95vh; /* Adjusted for larger screen presence */
+  border-radius: 20px; /* Slightly more rounded container */
+   /* Stronger, darker shadow */
+  margin: 3rem auto;
+  max-width: 1200px;
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /* Better than center when split layout */
+  justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(to right, #c85fb8, #ffffff);
-  padding: 0;
-  margin: 0;
+  padding: 3rem;
   position: relative;
   z-index: 1;
-  overflow: visible;
+  overflow: hidden;
 }
 
-
 .Leftpanel, .Rightpanel {
-  flex: 1 1 500px;
-  max-width: 600px;
-  padding: 2rem;
+  background: transparent; /* No distinct background for panels */
+  border-radius: 0; /* No border radius */
+  box-shadow: none; /* No shadow */
+  margin: 1.5rem;
+  padding: 0; /* Remove panel padding, container handles it */
+  flex: 1 1 450px;
+  max-width: 550px; /* Adjust max-width */
+  min-width: 280px;
+  box-sizing: border-box;
+  transition: none; /* Remove panel hover effects */
 }
 
 .Leftpanel {
-  min-width: 200px;
-  padding: 20px;
   display: flex;
-  justify-content: center;
-  align-items: self;
-  box-sizing: border-box;
   flex-direction: column;
-  margin-left: 0px;
-
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .Rightpanel {
-  min-width: 200px;
-  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-}
-
-
-.Leftpanel h1 {
-  margin: 0;
-  font-size: 3rem;
-  color: #000;
-  text-align: left;
-  white-space: normal;
-  justify-content: center;
-  flex-direction: column;
-  color: rgb(255, 255, 255);
-}
-
-.Leftpanel h1:hover {
-  color: #f3f3f3;
-  text-shadow: 0 0 5px rgb(174, 200, 200), 0 0 10px rgb(9, 10, 10), 0 0 20px rgb(8, 10, 10), 0 0 40px rgb(4, 31, 31);
-  transition: 0.5s;
-}
-
-.Leftpanel h1, .Leftpanel h2 {
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-.typing-wrapper {
-  width: 34ch;
-  overflow: hidden;
-  height: 40px;
-}
-
-.typing-text {
-  font-size: 30px;
-  letter-spacing: 2px;
-  font-family: monospace;
-  white-space: nowrap;
-  color: white;
-}
-
-.cursor {
-  display: inline-block;
-  width: 2px;
-  margin-left: 2px;
-  background-color: white;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.Profilepic {
-  width: 450px;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 50%;   /*  This makes the image circular */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease-in-out;
-}
-.fade-in {
-  opacity: 1;
-}
-
-.fade-out {
-  opacity: 0;
+  position: relative;
 }
 
 .Leftpanel h1 {
-  margin: 0;
-  font-size: 3rem;
-  color: #000;
-  text-align: left;
-  white-space: normal;
-  justify-content: center;
-  flex-direction: column;
-  color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif; /* Modern heading font */
+  font-size: 3.8rem; /* Larger font size */
+  color: #ffffff; /* White text for contrast */
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
+.Leftpanel h1 .highlight {
+  color: #e74c3c; /* Accent color: vibrant red */
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(231,76,60,0.5);
+}
 
 .typing-wrapper {
+  height: 45px; /* Slightly larger height */
   overflow: hidden;
   width: 100%;
 }
 
-.para {
-  font-size: 30px;
-  letter-spacing: 2px;
-  font-family: monospace;
+.typing-text {
+  font-family: 'Open Sans', sans-serif; /* Body text font */
+  font-size: 1.6rem; /* Larger typing text */
+  color: #ffffff; /* White text */
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid white;
-  color: white;
-  animation: typing 4s steps(22, end) infinite, cursor 0.5s step-end infinite alternate-reverse;
+  border-right: 3px solid rgba(255, 255, 255, 0.8); /* White cursor */
+  animation: typing 4s steps(22, end) infinite, cursor-blink 0.7s step-end infinite alternate;
+  min-height: 1.6em; /* Ensure consistent height */
 }
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 24ch; }
+  to { width: 24ch; } /* Adjust based on your text length */
 }
 
-@keyframes cursor {
-  from { border-right-color: white; }
+@keyframes cursor-blink {
+  from { border-right-color: rgba(255, 255, 255, 0.8); }
   to { border-right-color: transparent; }
 }
 
+.Profilepic {
+  width: 380px; /* Larger image */
+  height: 380px; /* Larger image */
+  object-fit: cover;
+  border-radius: 50%; /* Stays circular */
+  border: 5px solid rgba(255,255,255,0.2); /* Subtle white border */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4); /* Stronger shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.Profilepic:hover {
+  transform: scale(1.02); /* Gentle scale up */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6); /* Even stronger shadow on hover */
+}
+
 .btn {
-  padding: 12px 24px;
-  margin-top: 20px;
-  width: 150px;
-  background-color: #180404; /* Bright red as a base color */
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background: #e74c3c; /* Vibrant red accent color */
+  color: #fff;
+  padding: 16px 32px;
+  margin-top: 2.5rem;
   border: none;
-  border-radius: 50px; /* Rounded shape */
-  font-size: 16px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1.2rem;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4); /* Soft shadow */
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Color change on hover */
 .btn:hover {
-  background-color: #ff6666; /* Lighter red on hover */
-  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4); /* Enhanced shadow on hover */
-}
-
-/* Sparkle effect on click (active state) */
-.btn:active::before {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%) 0 0,
-              radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%) 20px 20px,
-              radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%) -20px -20px;
-  background-size: 40px 40px;
-  background-position: 50% 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: sparkle 0.5s ease-out forwards;
-  z-index: 1;
-}
-
-@keyframes sparkle {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(2);
-  }
+  background: #c0392b; /* Darker red on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 8px 24px rgba(231, 76, 60, 0.6);
 }
 
 .resume-overlay {
   position: fixed;
-  top: 5px;;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85); /* Very dark overlay */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
+.resume-frame {
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5); /* Prominent shadow */
+  border: none;
+  background: #fff; /* White background for PDF */
+  max-width: 90vw;
+  max-height: 85vh;
+  width: 100%;
+  height: 100%;
+}
+
 .close-btn {
   position: absolute;
-  top: 40px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #ff4444;
+  top: 25px;
+  right: 25px;
+  padding: 12px 24px;
+  background-color: #e74c3c; /* Red for close */
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.2s, transform 0.2s;
 }
 
 .close-btn:hover {
-  background-color: #240505;
+  background-color: #c0392b;
+  transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 992px) {
   .AboutMe-container {
     flex-direction: column;
-    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
   }
   .Leftpanel, .Rightpanel {
     max-width: 90%;
+    margin: 1rem 0;
   }
-  .Profilepic2{
-    width: 350px;
-    height: 350px;
+  .Profilepic {
+    width: 280px;
+    height: 280px;
   }
-  .contact-content {
-    flex-direction: column;
+  .Leftpanel h1 {
+    font-size: 3rem;
   }
-}
-
-@keyframes cursor {
-  from {
-    border-right-color: white;
+  .typing-text {
+    font-size: 1.4rem;
   }
-  to {
-    border-right-color: transparent;
-  }
-}
-.btn {
-  padding: 12px 24px;
-  margin-top: 20px;
-  width: 150px;
-  background-color: #ff4444; /* Bright red as a base color */
-  color: white;
-  border: none;
-  border-radius: 25px; /* Rounded shape */
-  font-size: 16px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-}
-
-/* Color change on hover */
-.btn:hover {
-  background-color: #ff6666; /* Lighter red on hover */
-  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4); /* Enhanced shadow on hover */
-}
-
-/* Sparkle effect on click (active state) */
-.btn:active::before {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%) 0 0,
-              radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%) 20px 20px,
-              radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%) -20px -20px;
-  background-size: 40px 40px;
-  background-position: 50% 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: sparkle 0.5s ease-out forwards;
-  z-index: 1;
-}
-
-@keyframes sparkle {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(2);
-  }
-}
-
-.resume-overlay {
-  position: fixed;
-  top: 5px;;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.close-btn {
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #ff4444;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.close-btn:hover {
-  background-color: #240505;
 }
 
 @media (max-width: 768px) {
   .AboutMe-container {
-    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .Leftpanel h1 {
+    font-size: 2.5rem;
+  }
+  .typing-text {
+    font-size: 1.2rem;
+  }
+  .Profilepic {
+    width: 220px;
+    height: 220px;
+  }
+  .btn {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .AboutMe-container {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 12px;
   }
   .Leftpanel, .Rightpanel {
-    flex: 100%;
-    min-width: 0;
+    margin: 0.5rem 0;
   }
-  .Profilepic2{
-    width: 150px;
-    border-radius: 150px;
+  .Leftpanel h1 {
+    font-size: 2rem;
+  }
+  .typing-text {
+    font-size: 1rem;
+  }
+  .Profilepic {
+    width: 160px;
+    height: 160px;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+  .close-btn {
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
 

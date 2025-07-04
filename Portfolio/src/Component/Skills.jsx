@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import './Skills.css';
-import Forms from './Forms';
 import DragCards from './DragCard';
 import DragCards2 from './Dragcard2';
 import DragCards3 from './DragCard3';
@@ -27,9 +26,7 @@ const Skills = () => {
       <div className='Toolsection' ref={ToolsectionRef}>
       <DragCards4 constraintRef={ToolsectionRef}/>
       </div>
-      <div className='Skilluppersection3'>
-        <Forms/>
-      </div>
+
     </>
   );
 }
