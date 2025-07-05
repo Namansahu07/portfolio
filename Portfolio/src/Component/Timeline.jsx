@@ -11,8 +11,7 @@ const Timeline = () => {
                 contentStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                 date="April25 - June25"
-                dateClassName="black-timeline-date"
-                dateStyle={{ color: "black" }}
+                dateStyle={{ color: "white !important" }}
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 icon={<MdWork />}
             >

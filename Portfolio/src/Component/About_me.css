@@ -9,7 +9,7 @@
   min-height: 95vh; /* Adjusted for larger screen presence */
   border-radius: 20px; /* Slightly more rounded container */
    /* Stronger, darker shadow */
-  margin: 3rem auto;
+   margin: 3rem auto;
   max-width: 1200px;
   width: 90vw;
   display: flex;

@@ -1,0 +1,109 @@
+.carousel-wrapper {
+    background-color: #0d0d0d;
+    padding: 40px 0;
+    color: white;
+    overflow: hidden;
+    font-family: sans-serif;
+    margin-top: -80px; /* Adjust this value as needed */
+  }
+  
+  .carousel-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .carousel-row {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    height: 240px;
+  }
+  
+  /* Common Track Style */
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 40s linear infinite;
+    width: max-content;       /* Needed for long track */
+    min-width: 200%;          /* Ensures full scroll coverage */
+  }
+  
+  .carousel-track.reverse {
+    animation: scroll-right 40s linear infinite;
+  }
+  
+  .carousel-track > * {
+    flex-shrink: 0;
+  }
+  
+  /* Image Card */
+  .image-card {
+    border-radius: 12px;
+    padding: 8px;
+    background: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: none;
+  }
+  
+  /* Card Sizes */
+  .image-card.vertical {
+    min-width: 160px;
+    height: 220px;
+  }
+  
+  .image-card.horizontal {
+    min-width: 240px;
+    height: 220px;
+  }
+  
+  /* Blur on sides */
+  .fade-left,
+  .fade-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .fade-left {
+    left: 0;
+    background: linear-gradient(to right, #0d0d0d 0%, transparent 100%);
+  }
+  
+  .fade-right {
+    right: 0;
+    background: linear-gradient(to left, #0d0d0d 0%, transparent 100%);
+  }
+  
+  /* Scroll Keyframes */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  

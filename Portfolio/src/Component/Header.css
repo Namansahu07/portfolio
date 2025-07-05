@@ -1,42 +1,45 @@
 .Navbar {
-    width: 100%;
-    display: flex;
-    background-color: white;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 50px;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 
 .Navbarimg {
-        width: 160px;
-        height: 50px;
-        cursor: pointer;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    
-    .Navbarimg:hover {
-        transform: scale(1.1); /* zoom effect on hover */
-        opacity: 0.8; /* slight transparency on hover */
-    }
-
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-right: 20px;
-    margin-top: 10px;
-    list-style-type: none; /* Remove bullet points */
+  width: 160px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-nav a, nav a:link, nav a:visited {
-        font-size: 18px;
-        cursor: pointer;
-        color: black; /* Default color for links */
-        text-decoration: none; /* Remove default underline */
-        transition: all 0.3s ease; /* Smooth transition for hover effects */
-        position: relative; /* Needed for the underline effect */
+.Navbarimg:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-right: 20px;
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 nav a:after {
@@ -46,12 +49,12 @@ nav a:after {
   left: 0;
   width: 0;
   height: 2px;
-  background: #c85fb8; /* Matching the footer link hover color, or white if preferred */
+  background: #c85fb8;
   transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #c85fb8; /* Color on hover */
+  color: #c85fb8;
 }
 
 nav a:hover:after {
@@ -59,46 +62,61 @@ nav a:hover:after {
 }
 
 .searchbtn {
-    position: relative;
-    padding: 1rem 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: black;
-    background: none;
-    border: 2px solid #ff4444;
-    border-radius: 8px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  position: relative;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  background: none;
+  border: 2px solid #ff4444;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: linear-gradient(#ff4444 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s), background-position 0.3s calc(0.3s - var(--t, 0s));
+}
 
+.searchbtn:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #fff;
+}
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
   }
-  
-  
+
+  .Navbarimg {
+    width: 140px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  nav a,
+  nav a:link,
+  nav a:visited {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
   .searchbtn {
-    background: linear-gradient(#ff4444 0 0) no-repeat calc(200% - var(--p, 0%))
-      100% / 200% var(--p, 0.2em);
-    transition: 0.3s var(--t, 0s),
-      background-position 0.3s calc(0.3s - var(--t, 0s));
+    width: 100%;
+    padding: 0.6rem;
+    margin: 10px;
+    font-size: 0.9rem;
   }
-  
-  .searchbtn:hover {
-    --p: 100%;
-    --t: 0.3s;
-    color: #fff;
-  }
-  
-  @media (max-width: 768px) {
-    .searchbtn {
-      padding: 0.5rem 0.5rem;
-      font-size: 0.8rem;
-      margin-right: 15px;
-      margin-left: 15px;
-    }
-    nav a, nav a:link, nav a:visited{
-      font-size: 15px;
-    }
-    ul{
-      gap:15px;
-    }
-  }
-  
+}
