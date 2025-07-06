@@ -97,7 +97,9 @@ const Projects = () => {
         <div className="cards-section-content">
           <div className="projects-header-row">
             <h2 className="section-title">My Projects</h2>
-            <button className="projects-all-btn">All Projects &rarr;</button>
+            <a href=" https://github.com/Namansahu07?tab=repositories ">           
+               <button className="projects-all-btn">All Projects &rarr;</button>
+            </a>
           </div>
           <div className="cards-container">
             {/* Card 1 */}
@@ -114,7 +116,7 @@ const Projects = () => {
               <div className="modern-project-title">Numerology</div>
               <div className="modern-project-desc">Built a fully responsive web application featuring 5+ numerology calculators. Enhanced
                 user experience through dynamic form handling,and modalbased flows like “Book Appointment” and “Ask Your Questions.”</div>
-              <a href="https://glittering-crumble-c39134.netlify.app/" target="_blank" rel="noopener noreferrer" className="modern-project-btn">DM for walkthrough</a>
+              <a href="https://glittering-crumble-c39134.netlify.app/" target="_blank" rel="noopener noreferrer" className="modern-project-btn">View this Project</a>
             </div>
             {/* Card 2 */}
             <div className="modern-project-card">

@@ -519,9 +519,11 @@
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
   outline: none;
   margin-left: 1.2rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4em;
+  text-decoration: none;
+  text-align: center;
 }
 
 .projects-all-btn:hover {
@@ -542,6 +544,7 @@
   }
   .projects-all-btn {
     font-size: 0.98rem;
+    text-decoration: none;
     padding: 0.5em 1em;
     margin-left: 0;
     }
