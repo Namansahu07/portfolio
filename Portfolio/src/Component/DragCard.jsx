@@ -24,9 +24,9 @@ const Cards = ({ constraintRef }) => {
         constraintRef={constraintRef}
         src={css}
         alt="Example image"
-        rotate="6deg"
-        top="35%"
-        left="40%"
+        rotate="-20deg"
+         top="25%"
+      left="26%"
         className="w-10 md:w-12"
       />
       <Card
@@ -34,8 +34,8 @@ const Cards = ({ constraintRef }) => {
         src={html}
         alt="Example image"
         rotate="12deg"
-        top="45%"
-        left="55%"
+        top="49%"
+        left="57%"
         className="w-8 md:w-10"
       />
       <Card
@@ -43,7 +43,7 @@ const Cards = ({ constraintRef }) => {
         src={js}
         alt="Example image"
         rotate="-6deg"
-        top="25%"
+        top="23%"
         left="45%"
         className="w-12 md:w-14"
       />

@@ -4,8 +4,6 @@ import { twMerge } from "tailwind-merge";
 import git from "../assets/git.png"
 import wp from "../assets/wp.png";
 import vsc from "../assets/vsc.png";
-
-import boot from "../assets/boot.png";
 import gith from "../assets/gith.png"
 
 export const DragCards4 = ({ constraintRef }) => {

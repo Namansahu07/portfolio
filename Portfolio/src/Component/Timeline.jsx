@@ -6,52 +6,61 @@ import { MdWork, MdSchool, MdStar, MdFindInPage } from 'react-icons/md';
 const Timeline = () => {
     return (
         <VerticalTimeline>
-            <VerticalTimelineElement
+            <VerticalTimelineElement 
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                 date="April25 - June25"
-                dateStyle={{ color: "white !important" }}
+                dateClassName="custom-white-date"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 icon={<MdWork />}
             >
                 <h3 className="vertical-timeline-element-title" style={{ color: "black" }}>Outlier Ai </h3>
                 <h4 className="vertical-timeline-element-subtitle" style={{ color: "black" }} >Web Developer Ai Trainer</h4>
                 <p style={{ color: "black" }}>
-                    • Enhanced my web development and computer science skills through real-world client-driven projects.
+                    • Expanded AI model performance by delivering high-quality, structured training data for NLP and
+                    classification models.
                     <br/>
-                    • Collaborated with 15+ Al Trainers to deliver high-quality data for model training.
+                    • Collaborated with 15+ Al Trainers to ensure consistent data quality, supporting scalable and
+                    reliable model deployment.
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Mar25-Apr25"
+                dateClassName="custom-white-date"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 icon={<MdWork />}
             >
                 <h3 className="vertical-timeline-element-title">It Nucleus</h3>
                 <h4 className="vertical-timeline-element-subtitle">Intern (Paid)</h4>
                 <p>
-                    • Improved SEO and site structure using semantic HTML, keyword research, and content optimization, boosting site visibility.<br />
-                    • Suggested SEO changes aligned with web standards, enhancing accessibility and search performance.
+                    • Boosted organic traffic by 30% through SEO best practices, including semantic HTML, keyword
+                    research, and strategic content updates.<br />
+                    • Recommended structural improvements based on web standards, resulting in better site
+                    accessibility and improved search engine rankings.
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Jun2024-Aug2024"
+                dateClassName="custom-white-date"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 icon={<MdWork />}
             >
                 <h3 className="vertical-timeline-element-title">CodSoft</h3>
                 <h4 className="vertical-timeline-element-subtitle">Web Developer Intern</h4>
                 <p>
-                    •Built and maintained responsive web pages using HTML, CSS, and JavaScript, enhancing UI consistency and user engagement.<br />
-                    • Collaborated across teams to understand tech workflows, leading to better development decisions and smoother coordination.
+                    •Improved collaboration across tech teams by aligning workflows, reducing development friction
+                    and cutting iteration time by 15%.<br />
+                    • Enhanced user experience by building responsive and consistent web interfaces using HTML,
+                    CSS, and JavaScript, increasing engagement by 20%.
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Present"
+                dateClassName="custom-white-date"
                 iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                 icon={<MdSchool />}
             >
@@ -65,6 +74,7 @@ const Timeline = () => {
             <VerticalTimelineElement
                 className="vertical-timeline-element--education"
                 date=" 2022-2025"
+                dateClassName="custom-white-date"
                 iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                 icon={<MdSchool />}
             >
@@ -77,6 +87,7 @@ const Timeline = () => {
             <VerticalTimelineElement
                 className="vertical-timeline-element--education"
                 date="2021-2022"
+                dateClassName="custom-white-date"
                 iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                 icon={<MdSchool />}
             >
@@ -89,6 +100,7 @@ const Timeline = () => {
             <VerticalTimelineElement
                 className="vertical-timeline-element--education"
                 date="2020 - 2021"
+                dateClassName="custom-white-date"
                 iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                 icon={<MdSchool />}
             >

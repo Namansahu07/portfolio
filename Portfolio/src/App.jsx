@@ -9,7 +9,7 @@ import Projects from './Component/Projects';
 import Forms from './Component/Forms';
 import Footer from './Component/Footer';
 import ImageCarousel from './Component/ImageCrousel';
-
+import './App.css';
 function App() {
   const router = createBrowserRouter([
     {
